@@ -18,11 +18,21 @@
 	```
 	poetry install
 	```
-5. Установите переменную окружения с ссылкой на базу данных
+5. Запустите докер контейнер с базой данных
 	```
-	export DB_URL=<your-db-url>
+	docker run --name my-postgres \ 
+	-p 5432:5432 \
+	-e POSTGRES_USER=<your-username> \
+	-e POSTGRES_PASSWORD=<your-password> \
+	-e POSTGRES_DB=<your-database-name> \
+	-v pgdata:/var/lib/postgresql/data \
+	-d postgres	
 	```
-6. Чтобы узнать о доступных командах и параметрах, выполните:
+6. Установите переменную окружения с ссылкой на базу данных
+	```
+	export DB_URL=postgresql:/<your-username>:<your-password>@localhost:5432/<your-database-name>
+	```
+7. Чтобы узнать о доступных командах и параметрах, выполните:
 	```
 	poetry run app -h
 
