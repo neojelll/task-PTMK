@@ -2,21 +2,30 @@
 
 ## Установка
 
-1. установите  poetry
-```curl -sSL https://install.python-poetry.org | python3 -```
-2. клонируйте репозиторий 
-```git clone https://github.com/neojelll/task-PTMK```
-3. Перейдите в директорию проекта:
-   ```cd app```
-4. установите зависимости
-```poetry install```
-5. установите переменную окружения с ссылкой на базу данных
-```export DB_URL=<your db url>```
-6. чтобы узнать о доступных командах и параметрах, выполните:
-```poetry run app -h```
-
-	Вывод команды:
+1. Установите  poetry
 	```
+	curl -sSL https://install.python-poetry.org | python3 -
+	```
+2. Клонируйте репозиторий 
+	```
+	git clone https://github.com/neojelll/task-PTMK
+	```
+3. Перейдите в директорию проекта:
+   ```
+   cd app
+   ```
+4. Установите зависимости
+	```
+	poetry install
+	```
+5. Установите переменную окружения с ссылкой на базу данных
+	```
+	export DB_URL=<your-db-url>
+	```
+6. Чтобы узнать о доступных командах и параметрах, выполните:
+	```
+	poetry run app -h
+
 	usage: app [-h] {1,2,3,4,5,6} ...
 
 	Employee Management Application
